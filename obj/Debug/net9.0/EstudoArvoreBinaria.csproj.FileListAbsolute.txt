@@ -1,0 +1,15 @@
+D:\ProjetosGit\EstudoArvoreBinaria\bin\Debug\net9.0\EstudoArvoreBinaria.exe
+D:\ProjetosGit\EstudoArvoreBinaria\bin\Debug\net9.0\EstudoArvoreBinaria.deps.json
+D:\ProjetosGit\EstudoArvoreBinaria\bin\Debug\net9.0\EstudoArvoreBinaria.runtimeconfig.json
+D:\ProjetosGit\EstudoArvoreBinaria\bin\Debug\net9.0\EstudoArvoreBinaria.dll
+D:\ProjetosGit\EstudoArvoreBinaria\bin\Debug\net9.0\EstudoArvoreBinaria.pdb
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.AssemblyInfoInputs.cache
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.AssemblyInfo.cs
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.csproj.CoreCompileInputs.cache
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.sourcelink.json
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.dll
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\refint\EstudoArvoreBinaria.dll
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.pdb
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\EstudoArvoreBinaria.genruntimeconfig.cache
+D:\ProjetosGit\EstudoArvoreBinaria\obj\Debug\net9.0\ref\EstudoArvoreBinaria.dll

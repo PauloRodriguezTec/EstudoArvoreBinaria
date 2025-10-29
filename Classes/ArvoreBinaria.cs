@@ -55,5 +55,69 @@ namespace EstudoArvoreBinaria.Classes
                 }
             }
         }
+
+        // Caminhamento pré-fixado (pré-ordem)
+        private void PreFixado(No atual)
+        {
+            if (atual != null)
+            {
+                Console.WriteLine($"Id: {atual.GetId()} Elemento: {atual.GetElemento()}");
+                PreFixado(atual.GetEsq());
+                PreFixado(atual.GetDir());
+            }
+        }
+
+        // Caminhamento pós-fixado (pós-ordem)
+        private void PosFixado(No atual)
+        {
+            if (atual != null)
+            {
+                PosFixado(atual.GetEsq());
+                PosFixado(atual.GetDir());
+                Console.WriteLine($"Id: {atual.GetId()} Elemento: {atual.GetElemento()}");
+            }
+        }
+        // Caminhamento simétrico fixado (infixado)
+        private void SimFixado(No atual)
+        {
+            if (atual != null)
+            {
+                SimFixado(atual.GetEsq());
+                Console.WriteLine($"Id: {atual.GetId()} Elemento: {atual.GetElemento()}");
+                SimFixado(atual.GetDir());
+            }
+        }
+        // Método para imprimir os elementos da árvore usando caminhamento pré-fixado
+        public void ImprimeElementosArvore()
+        {
+            PreFixado(raiz);
+        }
+        // Método privado para calcular a altura da árvore binária
+        private long CalcAltura(No atual, long a)
+        {
+            if (atual != null)
+            {
+                long e, d;
+                e = CalcAltura(atual.GetEsq(), a) + 1;
+                d = CalcAltura(atual.GetDir(), a) + 1;
+
+                if (e > d)
+                {
+                    return a + e;
+                }
+                else
+                {
+                    return a + d;
+                }
+            }
+            return a;
+        }
+
+        // Método público para obter a altura da árvore
+        public long AlturaArvore()
+        {
+            long a = 0;
+            return CalcAltura(raiz, a);
+        }
     }
 }
