@@ -1,74 +1,70 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EstudoArvoreBinaria.Classes
 {
     // Implementação da classe No em C#
     public class No
     {
-        private long id; // identificador do elemento
-        private object elemento; // armazena o elemento de cada No
-        private No esq; // aponta para o filho esquerdo do nó
-        private No dir; // aponta para o filho direito do nó
+        // Campos privados
+        private long id;         // Identificador do elemento
+        private object elemento; // Elemento armazenado
+        private No esq;          // Filho esquerdo
+        private No dir;          // Filho direito
+        private No pai;          // Pai do nó
+        private long b;          // Fator de balanceamento
 
-        // Construtor da classe No
+        // Construtor
         public No(long id, object elemento, No esq, No dir)
         {
             this.id = id;
             this.elemento = elemento;
             this.esq = esq;
             this.dir = dir;
+            this.pai = null;
+            this.b = 0;
         }
 
-        // Método para alterar o identificador do nó
-        public void SetId(long id)
+        // Representação textual do nó
+        public override string ToString()
         {
-            this.id = id;
+            return $"Id:{id} B:{b}";
         }
 
-        // Método para receber o identificador do nó
-        public long GetId()
+        // Propriedades públicas
+        public long Id
         {
-            return this.id;
+            get => id;
+            set => id = value;
         }
 
-        // Método para alterar o elemento
-        public void SetElemento(object elemento)
+        public object Elemento
         {
-            this.elemento = elemento;
+            get => elemento;
+            set => elemento = value;
         }
 
-        // Método para receber o objeto contido no No
-        public object GetElemento()
+        public No Esq
         {
-            return this.elemento;
+            get => esq;
+            set => esq = value;
         }
 
-        // Método que altera o filho esquerdo
-        public void SetEsq(No esq)
+        public No Dir
         {
-            this.esq = esq;
+            get => dir;
+            set => dir = value;
         }
 
-        // Método que recebe o filho esquerdo do nó
-        public No GetEsq()
+        public No Pai
         {
-            return this.esq;
+            get => pai;
+            set => pai = value;
         }
 
-        // Método que altera o filho direito
-        public void SetDir(No dir)
+        public long B
         {
-            this.dir = dir;
-        }
-
-        // Método que recebe o filho direito do nó
-        public No GetDir()
-        {
-            return this.dir;
+            get => b;
+            set => b = value;
         }
     }
-    // Final da classe No
 }
