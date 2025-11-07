@@ -10,7 +10,30 @@ namespace EstudoArvoreBinaria.Classes
         {
             raiz = null;
         }
+        public int ContarEsq()
+        {
+            return ContarEsqRecursivo(raiz, false);
+        }
+        private int ContarEsqRecursivo(No no, bool isLeft)
+        {
+            if (no == null)
+            {
+                return 0;
+            }
+            int count;
+            if (isLeft)
+            {
+                count = 1;
+            }
+            else
+            {
+                count = 0;
+            }
+            count += ContarEsqRecursivo(no.Esq, true);
+            count += ContarEsqRecursivo(no.Dir, false);
+            return count;
 
+        }
         public void InsereAVL(long id, object elemento)
         {
             No novoNo = new No(id, elemento, null, null);
@@ -166,6 +189,23 @@ namespace EstudoArvoreBinaria.Classes
             return RotacaoEsq(inicial);
         }
 
+
+        public void ImprimeArvoreDiagrama()
+        {
+            PreFixadoDiagrama(raiz, 0);
+        }
+        
+        private void PreFixadoDiagrama(No atual, int nivel = 0)
+        {
+            if (atual != null)
+            {
+                string indentacao = new string(' ', nivel * 4); // 4 espaços por nível
+                Console.WriteLine($"{indentacao}Id: {atual.Id} Elemento: {atual.Elemento}");
+                PreFixadoDiagrama(atual.Esq, nivel + 1);
+                PreFixadoDiagrama(atual.Dir, nivel + 1);
+            }
+        }
+        
         public void ImprimeElementosArvore()
         {
             PreFixado(raiz);

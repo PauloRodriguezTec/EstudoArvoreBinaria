@@ -8,17 +8,25 @@ class Program
     {
         ArvoreBinaria a = new ArvoreBinaria(); // cria a árvore binária
 
-        a.Insere(10, "A");
-        a.Insere(5, "B");
-        a.Insere(15, "C");
-        a.Insere(2, "D");
-        a.Insere(7, "E");
-        a.Insere(12, "F");
-        a.Insere(6, "G");
-        a.Insere(8, "H");
+        a.InsereAVL(1, "1");
+        a.InsereAVL(10, "10");
+        a.InsereAVL(100, "100");
+        a.InsereAVL(50, "50");
+        a.InsereAVL(30, "30");
+        a.InsereAVL(20, "20");
+        a.InsereAVL(60, "60");
+        a.InsereAVL(70, "70");
+        a.InsereAVL(110, "110");
+        a.InsereAVL(25, "25");
+        a.InsereAVL(13, "13");
+        a.InsereAVL(1135, "1135");
+        a.InsereAVL(189, "189");
 
-        a.ImprimeElementosArvore();
-        Console.WriteLine($"Altura: {a.AlturaArvore()}");
+        a.ImprimeArvoreDiagrama();
+        Console.WriteLine($"Total de nós à esquerda: {a.ContarEsq()}");
+
+
+
     }
 
 }
